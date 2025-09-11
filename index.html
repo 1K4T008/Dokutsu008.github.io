@@ -10,22 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="h1.css">
     </div>
-
-    
-  <style>
-    body {
-      transition: opacity 0.5s ease;
-      margin: 0;
-    }
-    a {
-      transition: opacity 0.5s ease;
-      text-decoration: none;
-      color: #000000;
-    }
-    a.fade-out {
-      opacity: 0;
-    }
-  </style>
   </section>
 </head>
   <div style="text-align: center;">
@@ -62,40 +46,22 @@
         <td width="250" height="50" bgcolor="0009B6"><a href="VsSelect.html" target="_self" id="BSBSelect5" class="delay1"><h5 style="color: white;">Chars de amigos</h5></a></td>
     </tr>
   </table>
-<script>
-  document.querySelectorAll('a[href]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      // Evita la navegación inmediata
-      e.preventDefault();
-
-      // Aplica el desvanecimiento al cuerpo de la página
-      document.body.style.opacity = 0;
-
-      // Redirige después de que termine la animación
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 1500); // 1500ms debe coincidir con el tiempo del CSS
-    });
-  });
-</script>
-</body>
 <section>
-     <script>
-document.querySelectorAll('.delay1').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault(); // Evita la navegación inmediata
+    <script>
+document.querySelectorAll('.delay1').forEach(enlace => {
+  enlace.addEventListener('click', function(e) {
+    e.preventDefault(); // Evita la redirección inmediata
 
-    // Agrega clase para desvanecer
-    this.classList.add('fade-out');
+    const url = this.href; // Guarda la URL del enlace
 
-    // Espera a que termine la animación antes de redirigir
     setTimeout(() => {
-      window.location.href = this.href;
-    }, 1500); // 1500ms = duración de la animación
+      window.location.href = url; // Redirige después del delay
+    }, 1500); // 1500 ms = 1.5 segundos de espera
   });
 });
-    </script>
+</script>
 </section>
+</body>
 <section>
 <script>
   document.getElementById("BSBSelect1").addEventListener("click", function() {
@@ -153,4 +119,5 @@ document.querySelectorAll('.delay1').forEach(link => {
 </script>
 
 </html>
+
 
