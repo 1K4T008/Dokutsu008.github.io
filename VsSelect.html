@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<title>Selecci&oacute;n de chars de otros autores</title>
+
+<section>
+    <a href="file:///C:/Users/d/Pictures/recursos%20para%20la%20p%C3%A1gina/index.html" target="_self" id="BSBSelect" class="delay1"><img src="BUTTON X.png" width="32" height="32"></img></a>
+<head>
+    <div style="text-align: center;">
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="h1.css">
+    </div>
+    <style>
+    body {
+      transition: opacity 0.5s ease;
+      margin: 0;
+    }
+    a {
+      transition: opacity 0.5s ease;
+      text-decoration: none;
+      color: #000000;
+    }
+    a.fade-out {
+      opacity: 1;
+    }
+  </style>
+ <div style="text-align: center;">
+<body background="BSB 2002.png" cover onclick="playaudio()">
+     <link rel="stylesheet" href="body6.css">
+<table align="center" border="6">
+    <tr>
+        <td width="100" height="100" bgcolor="#91BDDD"><img src="9000,0 CHAOTIC DONALD.png" width="100" height="100"></td>
+        <td width="100" height="100" bgcolor="#91BDDD"><img src="9000,0 VOID GAME OVER.png" width="100" height="100"></td>
+        <td width="100" height="100" bgcolor="#91BDDD"><img src="9000,0 CCTD.png" width="100" height="100"></td>
+    </tr>
+</table>
+</div>
+<script>
+  document.querySelectorAll('a[href]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      // Evita la navegación inmediata
+      e.preventDefault();
+
+      // Aplica el desvanecimiento al cuerpo de la página
+      document.body.style.opacity = 0;
+
+      // Redirige después de que termine la animación
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 1500); // 1500ms debe coincidir con el tiempo del CSS
+    });
+  });
+</script>
+</body>
+<section>
+    <script>
+document.querySelectorAll('.delay1').forEach(enlace => {
+    enlace.addEventListener('click', function(e) {
+        e.preventDefault();
+        setTimeout(() => {
+            window.location.href = this.href;
+        }, 700);
+    });
+});
+    </script>
+</section>
+<section>
+<script>
+  document.getElementById("BSBSelect").addEventListener("click", function() {
+    const audio = new Audio("select2.mp3");
+    audio.play();
+  });
+</script>
+<section>
+<section>
+<audio id="select2" loop controls hidden>
+    <source src="BSB2002-VS Select OST.mp3" type="audio/mpeg">
+    <source src="BSB2002-VS Select OST.ogg" type="audio/ogg">
+    <source src="BSB2002-VS Select OST.wav" type="audio/wav">
+    pido disculpas, pero es posible que el navegador a usar no sea compatible con el formato de audio
+</audio>
+
+</section>
+
+<script>
+    function playaudio(){
+        document.getElementById("select2").play();
+    }
+</script>
+</html>
