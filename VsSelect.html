@@ -4,7 +4,7 @@
 <title>Selecci&oacute;n de chars de otros autores</title>
 
 <section>
-    <a href="index.html" target="_self" id="BSBSelect" class="delay1"><img src="BUTTON X.png" width="32" height="32"></img></a>
+    <a href="index.html" target="_self" id="BSBSelect"><img src="BUTTON X.png" width="32" height="32"></img></a>
 <head>
     <div style="text-align: center;">
      <meta charset="UTF-8">
@@ -12,20 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="h1.css">
     </div>
-    <style>
-    body {
-      transition: opacity 0.5s ease;
-      margin: 0;
-    }
-    a {
-      transition: opacity 0.5s ease;
-      text-decoration: none;
-      color: #000000;
-    }
-    a.fade-out {
-      opacity: 1;
-    }
-  </style>
 </head>
  <div style="text-align: center;">
 <body background="BSB 2002.png" cover onclick="playaudio()">
@@ -38,35 +24,8 @@
     </tr>
 </table>
 </div>
-<script>
-  document.querySelectorAll('a[href]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      // Evita la navegación inmediata
-      e.preventDefault();
-
-      // Aplica el desvanecimiento al cuerpo de la página
-      document.body.style.opacity = 0;
-
-      // Redirige después de que termine la animación
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 1500); // 1500ms debe coincidir con el tiempo del CSS
-    });
-  });
-</script>
-</body>
-<section>
-    <script>
-document.querySelectorAll('.delay1').forEach(enlace => {
-    enlace.addEventListener('click', function(e) {
-        e.preventDefault();
-        setTimeout(() => {
-            window.location.href = this.href;
-        }, 700);
-    });
-});
-    </script>
 </section>
+</body>
 <section>
 <script>
   document.getElementById("BSBSelect").addEventListener("click", function() {
@@ -110,4 +69,5 @@ document.querySelectorAll('.delay1').forEach(enlace => {
 </script>
 
 </html>
+
 
