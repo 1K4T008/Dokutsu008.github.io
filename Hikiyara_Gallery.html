@@ -11,20 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="h1.css">
     </div>
-     <style>
-    body {
-      transition: opacity 0.5s ease;
-      margin: 0;
-    }
-    a {
-      transition: opacity 0.5s ease;
-      text-decoration: none;
-      color: #000000;
-    }
-    a.fade-out {
-      opacity: 1;
-    }
-  </style>
   <div style="text-align: center;">
     <h1 style="color: rgb(255, 255, 255);">
       Ahora te encuentras en este lugar al cual llam&eacute;
@@ -122,42 +108,24 @@
 <div style="text-align: center;">
 <h2 style="color: rgb(255, 255, 255);">Despu&eacute;s me dar&eacute; a la tarea de meter los artes o sprites que falten :D</h2>
 <br>
-<a href="file:///C:/Users/d/Pictures/recursos%20para%20la%20p%C3%A1gina/index.html" target="_self" id="BSBSelect" class="delay1"><img src="Regresar a la cueva.png" width="250" height="120"></img></a>
+<a href="index.html" target="_self" id="BSBSelect" class="delay1"><img src="Regresar a la cueva.png" width="250" height="120"></img></a>
 </div>
- <script>
-  document.querySelectorAll('a[href]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      // Evita la navegación inmediata
-      e.preventDefault();
-
-      // Aplica el desvanecimiento al cuerpo de la página
-      document.body.style.opacity = 0;
-
-      // Redirige después de que termine la animación
-      setTimeout(() => {
-        window.location.href = this.href;
-      }, 1500); // 1500ms debe coincidir con el tiempo del CSS
-    });
-  });
-</script>
-</body>
 <section>
     <script>
-document.querySelectorAll('.delay1').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault(); // Evita la navegación inmediata
+document.querySelectorAll('.delay1').forEach(enlace => {
+  enlace.addEventListener('click', function(e) {
+    e.preventDefault(); // Evita la redirección inmediata
 
-    // Agrega clase para desvanecer
-    this.classList.add('fade-out');
+    const url = this.href; // Guarda la URL del enlace
 
-    // Espera a que termine la animación antes de redirigir
     setTimeout(() => {
-      window.location.href = this.href;
-    }, 1500); // 1500ms = duración de la animación
+      window.location.href = url; // Redirige después del delay
+    }, 1500); // 1500 ms = 1.5 segundos de espera
   });
 });
-    </script>
+</script>
 </section>
+</body>
 <section>
 <script>
   document.getElementById("BSBSelect").addEventListener("click", function() {
@@ -181,4 +149,5 @@ document.querySelectorAll('.delay1').forEach(link => {
         document.getElementById("Bakuten").play();
     }
 </script>
+
 </html>
