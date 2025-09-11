@@ -45,6 +45,21 @@
 <section>
     <A href="index.html" target="_self" id="BSBSelect4" class="delay1"><img src="BUTTON X.png" width="32" height="32"></a><h3 style="color: rgb(255, 255, 255);">Atr&aacute;s/Back</h3>
 </section>
+<section>
+    <script>
+document.querySelectorAll('.delay1').forEach(enlace => {
+  enlace.addEventListener('click', function(e) {
+    e.preventDefault(); // Evita la redirección inmediata
+
+    const url = this.href; // Guarda la URL del enlace
+
+    setTimeout(() => {
+      window.location.href = url; // Redirige después del delay
+    }, 1500); // 1500 ms = 1.5 segundos de espera
+  });
+});
+</script>
+</section>
 </body>
 <section>
 <script>
@@ -88,6 +103,7 @@
 </script>
 </section>
 </html>
+
 
 
 
